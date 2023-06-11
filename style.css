@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: indianred;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    right: -20px;
+}
+
+#front{
+    animation: front-arm 2s  infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes front-arm{
+    0%, 100%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(15deg);
+    }
+}
+
+#middle{
+    animation: middle-arm 2s  infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes middle-arm{
+    0%, 100%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(-15deg);
+    }
+}
+
+#bottom{
+    animation: bottom-arm 2s  infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes bottom-arm{
+    0%, 100%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(8deg);
+    }
+}
